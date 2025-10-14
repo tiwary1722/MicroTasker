@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      IMAGE_NAME: todo-ui
+      IMAGE_NAME: micro-ui
       IMAGE_TAG: v2
-      ACR_NAME: acrdevtodoapp01
-      ACR_LOGIN_SERVER: acrdevtodoapp01.azurecr.io
+      ACR_NAME: acrprodmicrotasker
+      ACR_LOGIN_SERVER: aacrprodmicrotasker.azurecr.io
 
     steps:
       - name: Checkout code
@@ -24,9 +24,9 @@ jobs:
       - name: Azure Login
         uses: Azure/login@v2.3.0
         with:
-          client-id: ff27bcf6-f60c-4a57-8b01-8eee5de2a9cd
-          tenant-id: 0f7010fd-209e-4344-8457-043ffb37143b
-          subscription-id: 1075ec7a-b17a-4f37-bf3f-9d68c4506dc1
+          client-id: 391a807e-60d2-45a4-8279-701d7ba0d2ee
+          tenant-id: ba820411-fb17-40b7-aa1e-e6bb2ba7b2da
+          subscription-id: c8ae0155-19b9-4306-a16f-ce3e1dab29f4
 
       - name: Log in to ACR
         run: |
