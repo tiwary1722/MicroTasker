@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: firefox
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: firefox
+  ports:
+  - port: 443
+    targetPort: 3001
